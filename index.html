@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events — Training Management System</title>
+  <meta name="description" content="Browse and register for upcoming training events. View seat availability and manage your registrations." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header-brand">
+      <div class="brand-icon">📋</div>
+      <div class="brand-text">
+        <span class="brand-title">TrainingHub</span>
+        <span class="brand-sub">Event Management System</span>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html" class="nav-link active" id="nav-events">Events</a>
+      <a href="admin.html" class="nav-link" id="nav-admin">Admin Panel</a>
+    </nav>
+  </header>
+
+  <!-- ── Toast Container ────────────────────────────────────────── -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ── Main Content ───────────────────────────────────────────── -->
+  <main class="page-wrapper">
+
+    <!-- Page Heading -->
+    <div class="page-header">
+      <h1 class="page-title">Upcoming Training Events</h1>
+      <p class="page-subtitle">Register for sessions, manage cancellations, and track seat availability.</p>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-row" id="stats-row">
+      <div class="stat-card">
+        <div class="stat-label">Total Events</div>
+        <div class="stat-value" id="stat-total">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Open Events</div>
+        <div class="stat-value" id="stat-open">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Registrations</div>
+        <div class="stat-value" id="stat-regs">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Full Events</div>
+        <div class="stat-value" id="stat-full">—</div>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search events by title…"
+        aria-label="Search events"
+      />
+    </div>
+
+    <!-- Events Grid -->
+    <div class="events-grid" id="events-grid">
+      <!-- Populated by script.js -->
+    </div>
+
+    <!-- No Results -->
+    <div class="empty-state" id="no-results" style="display:none;">
+      <h3>No events found</h3>
+      <p>Try a different keyword or clear the search field.</p>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
